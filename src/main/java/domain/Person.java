@@ -1,12 +1,17 @@
 package domain;
 
-public class Person {
+import com.google.gson.annotations.SerializedName;
 
+public class Person {
+    @SerializedName(value = "firstName", alternate = "first-name")
     String firstName;
 
+    @SerializedName(value = "lastName", alternate = "last-name")
     String lastName;
 
+    @SerializedName(value = "birthYear", alternate = "year")
     int birthYear;
+
 
     public Person(String firstName, String lastName, int birthYear) {
         this.firstName = firstName;
